@@ -11,7 +11,7 @@ wechat = function(req,res){
     var timestamp = query.timestamp;
     var nonce = query.nonce;
     var echostr = query.echostr;
-    if(check(timestamp,nonce,signature, token)){
+    if(check(timestamp,nonce,signature, webchat_token)){
         res.end(echostr);
     }else{
         res.end("It is not from weixin");
